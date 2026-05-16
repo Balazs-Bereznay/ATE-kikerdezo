@@ -1,13 +1,14 @@
-# Dinamikus kikerdezo skeleton
+# ATE-kikerdezo
 
-Ez egy tiszta, statikus HTML/CSS/JS alap egy temafuggetlen kikerdezohoz. A cel az, hogy a kerdesmotor ne legyen egy adott tantargyhoz kotve: uj temakhoz eleg egy uj adatcsomagot betolteni.
+Az **ATE-kikerdezo** egy statikus (HTML/CSS/JS) tanulokartya es feleletvalasztos gyakorlo app. A jelenlegi alapcsomag a fertotlenitoszer-spektrum tablazat (Table 6.1) alapjan generalt kerdeseket tartalmazza, de a kerdesmotor ugy van kialakitva, hogy uj temak egyszeruen betolthetok legyenek uj adatcsomagokkal.
 
 ## Szerkezet
 
 - `index.html`: a felulet vazszerkezete es script betoltesek
 - `styles.css`: reszponziv, tema-valtozokra epulo megjelenes
 - `app.js`: kerdesmotor, szures, ellenorzes, haladasmentes
-- `data/sample-topic.js`: pelda adatcsomag a vart semaval
+- `data/disinfectant-table-topic.js`: aktualis kerdesbank csomag
+- `tools/*.py`: importalo es kerdesgeneralo segedszkriptek
 
 ## Adatcsomag minta
 
@@ -68,9 +69,15 @@ media: {
 }
 ```
 
+## Hasznalat
+
+1. Nyisd meg az `index.html` fajlt bongeszoben.
+2. Valassz tananyag csomagot es temakort.
+3. Oldd meg a kerdeseket, majd ellenorizd.
+4. Hasznald a szuroket (`Uj`, `Jelolt`, `Rontott`, `Gyakorlando`) az ismetleshez.
+
 ## Kovetkezo fejlesztesi pontok
 
-- tobb adatcsomag kozotti valtas
 - importalo Markdownbol vagy JSON-bol
 - spaced repetition finomabb algoritmussal
 - temakoronkenti eredmeny dashboard
