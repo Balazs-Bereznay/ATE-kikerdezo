@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" role="img" aria-labelledby="title desc">
+  <title id="title">Retegmodell sema</title>
+  <desc id="desc">Ot reteg szines blokkjai felulrol lefele.</desc>
+  <rect x="0" y="0" width="880" height="420" fill="#f4f6f8"/>
+  <g font-family="Verdana, Arial, sans-serif" font-size="24" fill="#17202a" text-anchor="middle">
+    <rect x="190" y="28" width="500" height="62" rx="8" fill="#cce7ff" stroke="#94bce5"/>
+    <text x="440" y="66">Alkalmazasi reteg</text>
+    <rect x="190" y="102" width="500" height="62" rx="8" fill="#d8f7d4" stroke="#9fdaa1"/>
+    <text x="440" y="140">Szallitasi reteg</text>
+    <rect x="190" y="176" width="500" height="62" rx="8" fill="#ffe7c9" stroke="#f0bf76"/>
+    <text x="440" y="214">Halozati reteg</text>
+    <rect x="190" y="250" width="500" height="62" rx="8" fill="#ffe4ea" stroke="#e8a4b5"/>
+    <text x="440" y="288">Adatkapcsolati reteg</text>
+    <rect x="190" y="324" width="500" height="62" rx="8" fill="#ecebff" stroke="#bab7f4"/>
+    <text x="440" y="362">Fizikai reteg</text>
+  </g>
+</svg>

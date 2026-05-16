@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dinamikus kikerdezo skeleton</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="topbar" aria-label="Kikerdezo allapot">
+        <div class="brand-block">
+          <p class="eyebrow" id="courseLabel">Tananyag</p>
+          <h1 id="appTitle">Kikerdezo skeleton</h1>
+        </div>
+        <div class="stats" aria-live="polite">
+          <span id="positionLabel">0 / 0</span>
+          <span id="knownLabel">0 tudott</span>
+          <span id="markedLabel">0 jelolt</span>
+          <span id="dueLabel">0 gyakorlando</span>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="sidebar" aria-label="Tanulasi beallitasok">
+          <div class="field-group">
+            <label for="packSelect">Tananyag csomag</label>
+            <select id="packSelect"></select>
+          </div>
+
+          <div class="field-group">
+            <label for="topicSelect">Temakor</label>
+            <select id="topicSelect"></select>
+          </div>
+
+          <div class="field-group">
+            <label for="modeSelect">Gyakorlasi mod</label>
+            <select id="modeSelect">
+              <option value="all">Osszes kerdes</option>
+              <option value="new">Uj kerdesek</option>
+              <option value="due">Ismetlendo</option>
+              <option value="marked">Jeloltek</option>
+              <option value="wrong">Rontottak</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="difficultySelect">Nehezseg</label>
+            <select id="difficultySelect">
+              <option value="all">Mind</option>
+              <option value="easy">Konnyu</option>
+              <option value="medium">Kozepes</option>
+              <option value="hard">Nehez</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="searchInput">Kereses</label>
+            <input id="searchInput" type="search" placeholder="Fogalom, valasz, tag...">
+          </div>
+
+          <div class="toggle-row">
+            <label>
+              <input id="shuffleToggle" type="checkbox">
+              Keveres
+            </label>
+            <label>
+              <input id="instantFeedbackToggle" type="checkbox">
+              Azonnali visszajelzes
+            </label>
+          </div>
+
+          <div class="sidebar-actions">
+            <details class="compact-details">
+              <summary>Adatmuveletek</summary>
+              <div class="details-actions">
+                <button id="exportBtn" class="secondary" type="button">Export</button>
+                <button id="resetBtn" class="secondary danger" type="button">Reset</button>
+              </div>
+            </details>
+          </div>
+        </aside>
+
+        <section class="study-area">
+          <div class="progress-wrap" aria-label="Haladas">
+            <div class="progress-bar"><span id="progressFill"></span></div>
+          </div>
+
+          <article class="question-panel">
+            <div class="question-meta">
+              <span id="questionType">-</span>
+              <span id="difficultyLabel">-</span>
+              <span id="tagList"></span>
+            </div>
+
+            <h2 id="questionText">Kerdes betoltese...</h2>
+            <figure id="questionMedia" class="question-media hidden">
+              <img id="questionImage" alt="">
+              <figcaption id="questionImageCaption"></figcaption>
+            </figure>
+            <form id="answersForm" class="answers"></form>
+
+            <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+
+            <div class="actions">
+              <div class="actions-primary">
+                <button id="prevBtn" class="secondary" type="button">Elozo</button>
+                <button id="submitBtn" class="primary" type="button">Ellenorzes</button>
+                <button id="nextBtn" class="primary" type="button">Kovetkezo</button>
+              </div>
+              <div id="sessionActions" class="session-actions hidden">
+                <button id="restartBtn" class="secondary" type="button">Kerdesek elolrol</button>
+                <button id="restartMarkedBtn" class="secondary" type="button">Megjeloltek ujrakerdezese</button>
+              </div>
+              <details class="compact-details actions-secondary">
+                <summary>Tovabbi muveletek</summary>
+                <div class="details-actions">
+                  <button id="markBtn" class="secondary" type="button" aria-pressed="false">Megjelolom</button>
+                  <button id="revealNextBtn" class="secondary hidden" type="button">Kov. valasz felfedese</button>
+                  <button id="revealAllBtn" class="secondary hidden" type="button">Osszes felfedese</button>
+                  <button id="knownBtn" class="secondary" type="button">Tudom</button>
+                  <button id="unknownBtn" class="secondary danger" type="button">Nem tudom</button>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <aside id="referencePanel" class="reference-panel" aria-label="Segitseg es magyarazat">
+            <div>
+              <p class="eyebrow">Magyarazat</p>
+              <h3 id="referenceTitle">-</h3>
+            </div>
+            <p id="referenceExcerpt"></p>
+            <div class="reference-actions">
+              <a id="referenceLink" href="#" target="_blank" rel="noreferrer">Forras</a>
+            </div>
+          </aside>
+
+          <section class="review-strip" aria-label="Gyors kerdesvalaszto">
+            <div id="questionDots" class="question-dots"></div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <script src="data/disinfectant-table-topic.js?v=20260516a"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
